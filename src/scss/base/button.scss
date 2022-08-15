@@ -1,0 +1,16 @@
+.btn {
+    display: inline-flex;
+    padding: 0px rem(10);
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border-radius: rem(5);
+    min-height: rem(45);
+    transition: color 0.3s ease 0s, background-color 0.3s ease 0s, border 0.3s ease 0s;
+    &_outline {
+        background-color: transparent;
+    }
+}

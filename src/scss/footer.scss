@@ -1,0 +1,114 @@
+.footer {
+    @include adaptiveValue("padding-top", 60, 20, 1170, 767.98, 1);
+    padding-bottom: rem(35);
+    background-color: $light_01;
+    &__container {
+        max-width: rem(1030);
+    }
+
+    &__top {
+        @include adaptiveValue("padding-top", 45, 30, 1170, 767.98, 1);
+        @include adaptiveValue("padding-bottom", 45, 30, 1170, 767.98, 1);
+        border-bottom: rem(1) solid $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__left {
+        @media (max-width: $mobile) {
+            order: 2;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        li {
+            @include adaptiveValue("margin-right", 40, 10, 1170, 767.98, 1);
+            @include adaptiveValue("margin-left", 40, 10, 1170, 767.98, 1);
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        line-height: 140%;
+        color: $black;
+        transition: all 0.3s ease 0s;
+        @media (max-width: $mobile) {
+            font-size: rem(18);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary_01;
+            }
+        }
+    }
+
+    &__logo {
+        img {
+            max-width: 100%;
+        }
+        @media (min-width: $mobile) {
+            @include adaptiveValue("margin-right", 100, 10, 1170, 767.98, 1);
+            @include adaptiveValue("margin-left", 100, 10, 1170, 767.98, 1);
+        }
+        @media (max-width: $mobile) {
+            order: 1;
+            flex: 1 1 100%;
+            text-align: center;
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__right {
+        @media (max-width: $mobile) {
+            order: 3;
+        }
+    }
+
+    &__bottom {
+        @include adaptiveValue("padding-top", 55, 30, 1170, 767.98, 1);
+    }
+
+    &__socials {
+        @include adaptiveValue("margin-bottom", 40, 20, 1170, 767.98, 1);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        font-size: rem(40);
+        color: $black;
+        transition: color 0.3s ease 0s;
+        @include adaptiveValue("margin-right", 12, 10, 1170, 767.98, 1);
+        @include adaptiveValue("margin-left", 12, 10, 1170, 767.98, 1);
+        @include adaptiveValue("margin-bottom", 30, 20, 1170, 767.98, 1);
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary_01;
+            }
+        }
+    }
+
+    &__copy {
+        display: flex;
+        justify-content: center;
+        gap: rem(14);
+    }
+
+    &__year,
+    &__privacy {
+        line-height: 140%;
+        color: $black;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary_01;
+            }
+        }
+    }
+}
