@@ -20,9 +20,7 @@ flsFunctions.menuInit();
 import * as flsScroll from "./files/scroll.js";
 
 // Функционал добавления классов к хедеру при прокрутке
-// Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
 flsScroll.headerScroll();
 
 /* Динамический адаптив */
-// Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
 import "./libs/dynamic_adapt.js";

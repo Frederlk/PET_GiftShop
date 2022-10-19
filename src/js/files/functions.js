@@ -35,7 +35,13 @@ export let isMobile = {
         return navigator.userAgent.match(/IEMobile/i);
     },
     any: function () {
-        return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows()
+        );
     },
 };
 // Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
@@ -83,10 +89,6 @@ export let bodyLock = (delay = 500) => {
     }
 };
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне: https://template.fls.guru/template-docs/menu-burger.html
-Сниппет (HTML): menu
-*/
 export function menuInit() {
     if (document.querySelector(".icon-menu")) {
         document.addEventListener("click", function (e) {
